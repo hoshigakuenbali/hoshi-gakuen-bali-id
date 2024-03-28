@@ -1,0 +1,164 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+---
+
+<WidgetWrapper>
+  <!-- Image Gallery -->
+
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <!-- Item 1 -->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+        data-carousel-item
+      >
+        <img
+          src="https://unsplash.com/photos/fYTVHcpak2g/download?ixid=M3wxMjA3fDF8MXxhbGx8MXx8fHx8fDJ8fDE3MDA4ODMwMTR8&force=true&w=1920"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl">First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+        data-carousel-item
+      >
+        <img
+          src="https://unsplash.com/photos/6eD8bc3TyPM/download?ixid=M3wxMjA3fDB8MXxhbGx8M3x8fHx8fDJ8fDE3MDA4ODMwMTR8&force=true&w=1920"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl">Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+        data-carousel-item
+      >
+        <img
+          src="https://unsplash.com/photos/pOvolukAYoU/download?ixid=M3wxMjA3fDB8MXxhbGx8MTB8fHx8fHwyfHwxNzAwODgzMDE0fA&force=true&w=1920"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl">Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+        data-carousel-item
+      >
+        <img
+          src="https://unsplash.com/photos/O7NfmUZoKnw/download?ixid=M3wxMjA3fDB8MXxhbGx8MzV8fHx8fHwyfHwxNzAwODgzMDE1fA&force=true&w=1920"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl">Fourth slide label</h5>
+          <p>Some representative placeholder content for the fourth slide.</p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+        data-carousel-item
+      >
+        <img
+          src="https://unsplash.com/photos/1cgLw4kgocc/download?ixid=M3wxMjA3fDB8MXxhbGx8Mzl8fHx8fHwyfHwxNzAwODgzMDE4fA&force=true&w=1920"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl">Fifth slide label</h5>
+          <p>Some representative placeholder content for the fifth slide.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 5"
+        data-carousel-slide-to="4"></button>
+    </div>
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"
+          ></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"
+          ></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+</WidgetWrapper>

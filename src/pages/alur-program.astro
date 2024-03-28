@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import alur from '~/assets/images/alur-program.jpg';
+import { Image } from 'astro:assets';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Alur Program dan Skema Keberangkatan',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Lihat Program Kami',
+        href: getPermalink('/program'),
+        icon: 'tabler:arrow-badge-down-filled',
+      },
+      { text: 'Penjelasan Detail', href: '#langkah' },
+    ]}
+  >
+    <Fragment slot="title">
+      Alur Program dan Skema Keberangkatan <br />
+      <span class="text-accent dark:text-white highlight"> LPK Hoshi Gakuen Bali</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Berikut adalah alur program dan skema keberangkatan yang akan dilalui peserta didik <span class="font-semibold"
+        >LPK Hoshi Gakuen Bali</span
+      > mulai dari pendaftaran, wawancara, mengikuti pelatihan, keberangkatan, bekerja di Jepang hingga akhirnya pulang ke
+      Indonesia.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%] lg:mb-20">
+        <Image src={alur} alt="Bagan Flowchart dari Alur Program LPK Hoshi Gakuen Bali" class="" />
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ingin mewujudkan mimpimu bekerja di Jepang?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Daftar Sekarang',
+        href: 'https://api.whatsapp.com/send?phone=6281928866777&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%21%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20Program%20Magang%20ke%20Jepang.%20Terima%20kasih.',
+      },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      Beergabunglah bersama kami dan teman - teman yang telah bekerja di Jepang melalui <span class="font-semibold"
+        >LPK Hoshi Gakuen Bali</span
+      >
+    </Fragment>
+  </CallToAction>
+</Layout>

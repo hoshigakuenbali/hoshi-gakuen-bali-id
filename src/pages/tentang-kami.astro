@@ -1,0 +1,186 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+// import avatars
+import maria from '~/assets/images/staff/maria.jpg';
+import made from '~/assets/images/staff/made.jpg';
+import ganing from '~/assets/images/staff/ganing.jpg';
+import wiba from '~/assets/images/staff/wiba.jpg';
+
+const metadata = {
+  title: 'Tentang Kami',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{
+      src: '~/assets/images/staff/lpk-hoshi-gakuen-bali.jpg',
+      alt: 'Para Staff dan Siswa LPK Hoshi Gakuen Bali berfoto bersama',
+    }}
+  >
+    <Fragment slot="title">
+      Profil dan Semua tentang <br />
+      <span class="text-accent dark:text-white highlight"> LPK Hoshi Gakuen Bali</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Hoshi Gakuen Bali adalah Lembaga Pelatihan Kerja (LPK) yang berdedikasi untuk mewujudkan impian Anda untuk bekerja
+      di Jepang. Sebagai pusat pelatihan Bahasa Jepang dan persiapan magang, kami telah berkomitmen untuk memberikan
+      pendidikan yang berkualitas dan mempersiapkan Anda untuk sukses dalam karir di Jepang. <br />
+      LPK Hoshi Gakuen Bali telah memiliki ijin resmi kami sebagai Sending Organization (SO) untuk mengirim peserta magang
+      secara legal. Kami bekerja sama dengan berbagai perusahaan mitra di Jepang untuk memberikan kesempatan berharga kepada
+      peserta didik kami untuk mengasah keterampilan dan pengetahuan mereka dalam lingkungan kerja yang sebenarnya.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Sekilas tentang LPK Hoshi Gakuen Bali"
+    subtitle="Menjadi Lembaga Pelatihan Kerja (LPK) unggulan dan berkualitas dalam mengirim tenaga kerja ke Jepang."
+    stats={[
+      { title: 'Jumlah Staff', amount: '4' },
+      { title: 'Beroperasi sejak tahun', amount: '2022' },
+      { title: 'Jumlah Peserta Didik', amount: '50+' },
+      { title: 'Partner Kerja Sama', amount: '20+' },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Visi Kami:"
+    image={{
+      src: 'https://unsplash.com/photos/3V8xo5Gbusk/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8c3RyYXRlZ3l8ZW58MHx8fHwxNjk3NjUyNzk2fDA&force=true&w=1920',
+      alt: 'Visi LPK Hoshi Gakuen Bali',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Mewujudkan Sumber Daya Manusia yang Kompeten
+      </h3>
+      LPK Hoshi Gakuen Bali kami berkomitmen dalam terwujudnya sumber daya manusia (SDM) yang berkompeten, berkualitas, dan
+      memiliki daya saing di era global.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-red-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    title="Misi Kami:"
+    items={[
+      {
+        title: 'Mengajarkan Budaya dan Bahasa Jepang',
+        description: `Menyelenggarakan program pelatihan ketrampilan Bahasa dan Budaya Jepang secara professional.`,
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Melatih disiplin',
+        description: 'Membina sikap, disiplin diri, dan moral agara menjadi generasi yang terampil dan berkarakter.',
+        icon: 'tabler:number-2',
+      },
+    ]}
+    image={{
+      src: 'https://unsplash.com/photos/Ua-agENjmI4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTR8fG1pc3Npb258ZW58MHx8fHwxNjk3NjExMjQ1fDA&force=true&w=1920',
+      alt: 'Misi LPK Hoshi Gakuen Bali',
+    }}
+  >
+    <Fragment slot="content">
+      LPK Hoshi Gakuen Bali memiliki misi - misi yang ingin kami capai dalam proses pendidikan.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-red-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    isReversed
+    title="Tujuan Kami:"
+    items={[
+      {
+        title: 'Meningkatkan Kemampuan Bahasa Jepang',
+        description: `Membantu peserta didik meningkatkan kemampuan berbicara, mendengarkan, membaca, dan menulis dalam Bahasa Jepang.`,
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Peserta Didik yang Berkualias dan Berkompeten',
+        description:
+          'Menghasilkan lulusan yang berkarakter, penuh tanggung jawab, serta mampu bersaing secara professional.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Mendukung Pengembangan Karir di Jepang',
+        description:
+          'Meningkatkan hubungan kerja sama bidang tenaga kerja antara Indonesia dan Jepang dalam merealisasikan program pelatihan.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Memberikan Pengalaman Magang Berkualitas',
+        description: 'Berkomitmen untuk menyediakan pengalaman magang yang berkualitas kepada peserta didiknya..',
+        icon: 'tabler:number-4',
+      },
+    ]}
+    image={{
+      src: 'https://unsplash.com/photos/8XlMU62ii8I/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8Z29hbHN8ZW58MHx8fHwxNjk3NjA1MjUyfDA&force=true&w=1920',
+      alt: 'Tujuan LPK Hoshi Gakuen Bali',
+    }}
+  >
+    <Fragment slot="content">
+      Dalam menyelenggarakan proses belajar mengajar, LPK Hoshi Gakuen Bali memiliki 4 tujuan utama, yaitu:
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-red-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          Pengurus <span class="text-accent">LPK Hoshi Gakuen Bali</span>
+        </h2>
+      </div>
+      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img class="mx-auto mb-4 w-36 h-36 rounded-lg" src={maria.src} alt="Maria Avatar" />
+          <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <a href="#">Maria</a>
+          </h3>
+          <p>Direktur Utama</p>
+        </div>
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img class="mx-auto mb-4 w-36 h-36 rounded-lg" src={made.src} alt="Made Avatar" />
+          <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <a href="#">Made</a>
+          </h3>
+          <p>Wakil Direktur</p>
+        </div>
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img class="mx-auto mb-4 w-36 h-36 rounded-lg" src={ganing.src} alt="Ganing Avatar" />
+          <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <a href="#">Ganing</a>
+          </h3>
+          <p>Sensei</p>
+        </div>
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img class="mx-auto mb-4 w-36 h-36 rounded-lg" src={wiba.src} alt="Wiba Avatar" />
+          <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <a href="#">Wiba</a>
+          </h3>
+          <p>Administrasi dan Operasional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

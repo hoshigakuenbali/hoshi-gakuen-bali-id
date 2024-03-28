@@ -1,0 +1,182 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getHomePermalink, getPermalink, getBlogPermalink } from '~/utils/permalinks';
+import Logo from '~/components/Logo.astro';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+export interface Props {
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+  theme?: string;
+}
+
+const { footNote = '' } = Astro.props;
+---
+
+<!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+<footer class="bg-[#F1F1F1]">
+  <div class="mx-auto px-4 pb-6 pt-9 sm:px-6 lg:px-8 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="flex justify-center text-teal-600 sm:justify-start">
+          <a href={getHomePermalink()}></a>
+          <Logo />
+        </div>
+
+        <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum itaque neque.
+        </p>
+
+        <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+          <li>
+            <a
+              href="https://instagram.com/hoshi_gakuen_bali"
+              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <Icon name={'tabler:brand-instagram'} class="w-5 h-5" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/lpkhoshigakuenbali/"
+              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label="Facebook"
+              target="_blank"
+            >
+              <Icon name={'tabler:brand-facebook'} class="w-5 h-5" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/message/4ZNSDTDSG5KSK1"
+              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label="Whatsapp"
+              target="_blank"
+            >
+              <Icon name={'tabler:brand-whatsapp'} class="w-5 h-5" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:infohoshigakuenbali@gmail.com"
+              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label="Email"
+              target="_blank"
+            >
+              <Icon name={'tabler:at'} class="w-5 h-5" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-900">Halaman Utama</p>
+
+          <ul class="mt-4 space-y-4 text-sm">
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href={getHomePermalink()}> Home</a>
+            </li>
+
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href={getPermalink('/program')}> Program</a>
+            </li>
+
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href={getPermalink('/alur-program')}>
+                Alur Program</a
+              >
+            </li>
+
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href={getPermalink('/tentang-kami')}>
+                Tentang Kami</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-900">Info Terkini</p>
+
+          <ul class="mt-4 space-y-4 text-sm">
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href={getBlogPermalink()}> Blog</a>
+            </li>
+
+            <li>
+              <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left col-span-2">
+          <p class="text-lg font-medium text-gray-900">Kontak</p>
+
+          <ul class="mt-4 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="mailto:infohoshigakuenbali@gmail.com"
+                target="_blank"
+              >
+                <span>
+                  <Icon name={'tabler:mail'} class="w-5 h-5" />
+                </span>
+                <span class="flex-1 text-gray-700">infohoshigakuenbali@gmail.com</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="tel:+6281928866777"
+              >
+                <span>
+                  <Icon name={'tabler:phone-call'} class="w-5 h-5" />
+                </span>
+
+                <span class="flex-1 text-gray-700">081928866777</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="https://maps.app.goo.gl/4jnhQumAgnpJru1NA"
+              >
+                <span>
+                  <Icon name={'tabler:map-pin'} class="w-5 h-5" />
+                </span>
+
+                <span class="flex-1 text-gray-700"
+                  >Jalan Raya Puri Gading Ruko A1 No. 02A, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361</span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-100 pt-6">
+        <div class="text-center sm:flex sm:justify-between sm:text-left"></div>
+      </div>
+    </div>
+    <div class="text-sm text-center mr-4 dark:text-slate-400">
+      <Fragment set:html={footNote} />
+    </div>
+  </div>
+</footer>
